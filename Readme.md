@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Надя Прокопьева](https://up.htmlacademy.ru/adaptive/15/user/460793).
-* Наставник: [Евгений Удод]
+* Наставник: [Евгений Удод](https://htmlacademy.ru/profile/id641255).
 
 ---
 
