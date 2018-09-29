@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка - Вязание на заказ</title>
+    <base href="https://htmlacademy-adaptive.github.io/460793-mishka/2/">
+</head>
+  <header class="page-header">
+			<a class="page-header__logo" href="index.html">
+				<img src="http://placehold.it/85x36" alt="Логотип Mishka" class="page-header__logo-image" width="85" height="36">
+			</a>
+			<nav class="main-nav">
+				<button class="main-nav__toggle" type="button">Открыть меню</button>
+				<div class="main-nav__wrapper">
+					<ul class="main-nav__list">
+						<li class="main-nav__item">
+							<a href="catalog.html">Каталог товаров</a>
+						</li>
+						<li class="main-nav__item main-nav__item--active">
+							<a>Вязание на заказ</a>
+						</li>
+						<li class="main-nav__item">
+							<a class="user-list__search" href="search.html">Поиск по сайту</a>
+						</li>
+						<li class="main-nav__item">
+							<a class="user-list__cart" href="search.html">Корзина: пока пуста</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<main class="page-main">
+			<h1 class="page-main__title page__title">Вязание на заказ</h1>
+				<form class="form" method="post" action="https://echo.htmlacademy.ru">
+					<p class="form-text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+					<fieldset class="form__category form__category--type">
+						<legend class="form__subtitle subtitle">Тип</legend>
+						<ul class="form__filter form__filter--type">
+							<li class="form__item form__item--type">
+								<input type="radio" id="accessory-type" name="type" value="accessory" checked>
+								<label class="form__filter-radio" for="accessory-type">Аксессуар для интерьера</label>
+							</li>
+							<li class="form__item form__item--type">
+								<input type="radio" id="toy-type" name="type" value="toy">
+								<label class="form__filter-radio" for="toy-type">Детская игрушка</label>
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset class="form__category form__category--color">
+						<legend class="form__subtitle subtitle">Цвет</legend>
+						<ul class="form__filter form__filter--color">
+							<li class="form__item form__item--color">
+								<input type="checkbox" id="white-color" name="color" value="white" checked>
+								<label class="form__filter-checkbox" for="white-color">Белый</label>
+							</li>
+							<li class="form__item form__item--color">
+								<input type="checkbox" id="gray-color" name="color" value="gray" checked>
+								<label class="form__filter-checkbox" for="gray-color">Серый</label>
+							</li>
+							<li class="form__item form__item--color">
+								<input type="checkbox" id="tiffany-color" name="color" value="tiffany">
+								<label class="form__filter-checkbox" for="tiffany-color">«Тиффани»</label>
+							</li>
+							<li class="form__item form__item--color">
+								<input type="checkbox" id="black-color" name="color" value="black">
+								<label class="form__filter-checkbox" for="black-color">Черный</label>
+							</li>
+							<li class="form__item form__item--color">
+								<input type="checkbox" id="pink-color" name="color" value="pink">
+								<label class="form__filter-checkbox" for="pink-color">Розовый</label>
+							</li>
+							<li class="form__item form__item--color">
+								<input type="checkbox" id="orange-color" name="color" value="orange">
+								<label class="form__filter-checkbox" for="orange-color">Оранжевый</label>
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset class="form__category form__category--full-name">
+						<legend class="form__subtitle subtitle">ФИО</legend>
+						<p class="form__field-item">
+							<label for="first-name-field">Имя:</label>
+							<input class="form__field" id="first-name-field" type="text" name="first-name" value="" placeholder="Введите ваше имя*" required>
+						</p>
+						<p class="form__field-item">
+							<label for="last-name-field">Фамилия:</label>
+							<input class="form__field" id="last-name-field" type="text" name="last-name" value="" placeholder="Укажите фамилию*" required>
+						</p>
+						<p class="form__field-item">
+							<label for="patronymic-name-field">Отчество:</label>
+							<input class="form__field" id="patronymic-name-field" type="text" name="patronymic-name" value="" placeholder="Отчество, если желаете">
+						</p>
+					</fieldset>
+					<fieldset class="form__category form__category--phone">
+						<legend class="form__subtitle subtitle">Тел</legend>
+						<p class="form__field-item">
+							<label class="visually-hidden" for="phone-field">Телефон</label>
+							<input class="form__field" id="phone-field" type="tel" name="phone" value="" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+						</p>
+					</fieldset>
+					<fieldset class="form__category form__category--email">
+						<legend class="form__subtitle subtitle">E-mail</legend>
+						<p class="form__field-item">
+							<label class="visually-hidden" for="email-field">Электронная почта</label>
+							<input class="form__field" id="email-field" type="email" name="email" value="" placeholder="Ваш Email*" required>
+						</p>
+					</fieldset>
+					<fieldset class="form__category form__category--other">
+						<legend class="form__subtitle subtitle">Доп</legend>
+						<p class="form__field-item form__field-other">
+						 	<label class="visually-hidden" for="other-field">Дополнительная информация</label>
+							<textarea class="field" id="other-field" name="other" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+						</p>
+					</fieldset>
+					<span class="form__footnote">*Поля обязательны для заполнения</span>
+					<button class="form__btn btn" type="submit">Отправить заказ</button>
+				</form>
+		</main>	
+		<footer class="page-footer">
+			<div class="page-footer_wrapper">
+				<div class="page-footer__social social">
+					<ul class="social__list">
+						<li class="social__item"><a a class="social__link social__link--vk" href="#">Instagram</a></li>
+						<li class="social__item"><a a class="social__link social__link--fb" href="#">Facebook</a></li>
+						<li class="social__item"><a a class="social__link social__link--twit" href="#">Twitter</a></li>
+					</ul>
+				</div>
+				<div class="page-footer__copyright copyright">
+					<b class="copyright__text">Разработано</b>
+					<a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img src="http://placehold.it/27x134" alt="Логотип HTML Academy" width="27" height="34"></a>
+				</div>
+			</div>
+		</footer>
+                
+               
+               
+	
