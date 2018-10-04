@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка - Каталог товаров</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -30,7 +31,9 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="page-main__title page__title">Каталог товаров</h1>
+      <div class="page-main__title">
+        <h1 class="title--page title">Каталог товаров</h1>
+      </div>
       <section class="catalog">
         <h2 class="visually-hidden">Каталог товаров</h2>
         <ul class="catalog__list">
@@ -82,7 +85,7 @@
         </ul>
       </section>
       <section class="manufacture">
-        <h2 class="manufacture__title section__title">Процесс производства</h2>
+        <h2 class="manufacture__title title--section title">Процесс производства</h2>
         <div class="manufacture__video">
           <img src="http://placehold.it/260x150" alt="Cкриншот" width="260" height="150">
         </div>
@@ -94,9 +97,9 @@
       <div class="page-footer_wrapper">
         <div class="page-footer__social social">
           <ul class="social__list">
-            <li class="social__item"><a a class="social__link social__link--vk" href="#">Instagram</a></li>
-            <li class="social__item"><a a class="social__link social__link--fb" href="#">Facebook</a></li>
-            <li class="social__item"><a a class="social__link social__link--twit" href="#">Twitter</a></li>
+            <li class="social__item"><a class="social__link social__link--vk" href="#">Instagram</a></li>
+            <li class="social__item"><a class="social__link social__link--fb" href="#">Facebook</a></li>
+            <li class="social__item"><a class="social__link social__link--twit" href="#">Twitter</a></li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
@@ -106,20 +109,20 @@
       </div>
     </footer>
     <div class="modal">
-      <h2 class="modal__title section__title">Добавить в корзину</h2>
-      <span>Выберите размер:</span>
+      <h2 class="modal__title title--section title">Добавить<br>в корзину</h2>
+      <span class="modal__text">Выберите размер:</span>
       <ul class="modal__filter">
-        <li class="modal__item modal__size-item">
-          <input class="modal__size" type="radio" id="small-size" name="size" value="small" checked>
-          <label class="modal__filter-radio" for="small-size">S</label>
+        <li class="modal__item">
+          <input class="modal-radio" type="radio" id="small-size" name="size" value="small" checked>
+          <label class="modal__label" for="small-size">S</label>
         </li>
         <li class="modal__item">
-          <input type="radio" id="medium-size" name="size" value="medium">
-        <label class="modal__filter-radio" for="medium-size">M</label>
+          <input class="modal-radio" type="radio" id="medium-size" name="size" value="medium">
+          <label class="modal__label" for="medium-size">M</label>
         </li>
         <li class="modal__item">
-          <input type="radio" id="large-size" name="size" value="large">
-          <label class="modal__filter-radio" for="large-size">L</label>
+          <input class="modal-radio" type="radio" id="large-size" name="size" value="large">
+          <label class="modal__label" for="large-size">L</label>
         </li>
       </ul>
         <a href="#" class="modal__btn btn">Добавить</a>
