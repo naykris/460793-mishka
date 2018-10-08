@@ -1,17 +1,103 @@
 .products {
-  padding: 0 30px; /*временно*/
-  box-sizing: border-box;
-  background-color: @downy; /*временно*/
+  background-color: @snow;
+
+  &__title {
+    min-width: 177px;
+    padding: 70px 9.4%;
+    box-sizing: border-box;
+    color: @black;
+    text-align: center;
+
+    &--index {
+      min-height: 282px;
+      background-image: url("../../img/hero-mobile@1x.jpg");
+      background-position: center -18px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__list {
+    .reset-list();
+  }
+
+  &__item--left {
+    background-color: @downy;
+  }
+
+  &__item--right {
+    background-color: @cyan;
+  }
+
+  &__link {
+    .reset-link();
+    display: inline-block;
+    padding: 24px 9.4% 31px;
+    box-sizing: border-box;
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: 700;
+    color: @white;
+  }
+
+  &__category {
+    padding-right: 130px;
+  }
 }
 
-.products__list {
-  .reset();
+@media (min-width: @tablet-width) {
+  .products {
+    &__title {
+      min-height: 226px;
+      padding: 105px 6.5% 57px;
+
+      &--index {
+        padding: 155px 6.5%;
+        min-height: 627px;
+        background-image: url("../../img/hero-tablet@1x.jpg");
+        background-position: center top;
+      }
+    }
+
+    &__list {
+      display: flex;
+      padding: 0 6.5%;
+    }
+
+    &__item {
+      width: 50%;
+    }
+
+    &__link {
+      padding-top: 30px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__category {
+      padding-right: 31%;
+    }
+  }
 }
 
-.products__item a {
-  .reset-link();
-  font-size: 19px;
-  line-height: 24px;
-  font-weight: 700;
-  color: @white;
+@media (min-width: @desktop-width) {
+  .products {
+    &__title--index {
+      background-image: url("../../img/hero-desktop@1x.jpg");
+      background-position: center top;
+    }
+
+    &__list {
+      width: 1050px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    &__link {
+      padding: 30px 38px;
+    }
+
+    &__category {
+      padding-right: 350px;
+    }
+  }
 }

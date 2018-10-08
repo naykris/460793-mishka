@@ -1,5 +1,5 @@
 body {
-  width: 320px;
+  min-width: 320px;
   margin: 0 auto;
   padding: 0;
   font-family: @font-family;
@@ -8,4 +8,27 @@ body {
   font-weight: 400;
   color: @grey;
   background-color: @white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  padding: 0 9.4%;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    padding: 0 6.5%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    width: 1050px;
+    margin: 0 auto;
+    padding: 0;
+  }
 }

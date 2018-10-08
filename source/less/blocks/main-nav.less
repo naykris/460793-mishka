@@ -1,11 +1,135 @@
-.main-nav__list {
-  .reset();
+.main-nav {
+  width: 100%;
+
+  &__toggle {
+    display: none;
+  }
+
+  &__list {
+    .reset-list();
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+
+  &__item {
+    padding: 25px 0 23px 24%;
+    vertical-align: top;
+    border-top: 1px solid rgba(@grey, 0.1);
+    position: relative;
+  }
+
+  &__link {
+    .reset-link();
+    color: @black;
+    vertical-align: top;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+  }
+
+  .desktop-list {
+    display: none;
+  }
 }
 
-.main-nav__item a {
-  .reset-link();
-  font-size: 17px;
-  line-height: 24px;
-  font-weight: 700;
-  color: @black;
+.site-list__item--note {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      border-bottom: none;
+    }
+
+    .site-list {
+      margin-left: -100px;
+      order: 2;
+      font-size: 15px;
+    }
+
+    .user-list {
+      justify-content: flex-end;
+    }
+
+    .site-list__item {
+      padding: 18px 0;
+      padding-right: 37px;
+    }
+
+    .site-list__item--note {
+      display: block;
+      font-weight: 400;
+      margin-left: auto;
+      padding-right: 0;
+    }
+
+    .user-list__item {
+      padding: 30px 0 34px;
+      box-sizing: border-box;
+      border-left: 1px solid rgba(@grey, 0.1);
+    }
+
+    &__item {
+      border-top: none;
+    }
+
+    &__link {
+      display: flex;
+    }
+
+    &__link--search {
+      min-width: 82px;
+      font-size: 0;
+    }
+
+    &__link--cart {
+      padding-left: 80px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
+
+    .site-list {
+      margin: 0;
+      font-size: 17px;
+
+      &__item {
+        padding: 30px 35px 33px;
+      }
+
+      &__item:first-child {
+        padding-left: 0;
+        border-right: 1px solid rgba(@grey, 0.1);
+      }
+
+      &__item--note {
+        position: absolute;
+        top: 107px;
+        right: 0;
+        font-size: 15px;
+        padding: 0;
+      }
+    }
+
+    .user-list {
+      order: 2;
+    }
+  }
 }

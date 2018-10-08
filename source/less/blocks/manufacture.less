@@ -1,4 +1,33 @@
 .manufacture {
-  padding: 30px 30px 90px;
+  position: relative;
+  padding: 30px 0 90px;
   box-sizing: border-box;
+
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__text {
+  .reset-list();
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .manufacture {
+    &__title {
+      position: inherit;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .manufacture {
+    display: flex;
+
+    &__title {
+      position: inherit;
+    }
+  }
 }
