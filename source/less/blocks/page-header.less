@@ -1,18 +1,11 @@
 .page-header {
-  min-height: 80px;/* ?? */
   margin: 0 auto;
   box-sizing: border-box;
+}
 
-  &__container {
+@media (max-width: @mobile-width-only) {
+  .page-header__container {
     padding: 0;
-  }
-
-  &__logo {
-    display: block;
-    padding-top: 22px;
-    height: 80px;
-    text-align: center;
-    box-sizing: border-box;
   }
 }
 
@@ -21,33 +14,5 @@
     height: 88px;/* ?? */
     min-width: 768px;
     border-bottom: 1px solid rgba(@grey, 0.1);
-
-    &__container {
-      display: flex;
-      padding: 0 6.5%;
-    }
-
-    &__logo {
-      width: 112px;/* временно */
-      background-color: pink;/* временно */
-    }
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-header {
-    position: relative;
-    height: auto;
-
-    &__logo {
-      position: absolute;
-      width: 149px;/* временно */
-      height: 73px;/* временно */
-      background-color: pink;/* временно */
-      top: 9px;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 0;
-    }
   }
 }
