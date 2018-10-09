@@ -1,9 +1,6 @@
 .main-nav {
   width: 100%;
-
-  &__toggle {
-    display: none;
-  }
+  position: relative;
 
   &__list {
     .reset-list();
@@ -27,6 +24,19 @@
     .reset-link();
     color: @black;
     vertical-align: top;
+
+    [href]&:hover,
+    [href]&:focus {
+      color: rgba(@black, 0.6);
+
+      svg path {
+        fill: @downy;
+      }
+    }
+
+    [href]&:active {
+      opacity: 0.3;
+    }
   }
 
   &__icon {
@@ -47,6 +57,15 @@
       width: 85px;
       height: 36px;
     }
+
+    &[href]:hover,
+    &[href]:focus {
+      opacity: 0.6;
+    }
+
+    &[href]:active {
+      opacity: 0.3;
+    }
   }
 
   &__note {
@@ -54,11 +73,87 @@
   }
 }
 
+@media (max-width: @mobile-width-only) {
+  .main-nav {
+    &__toggle {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      z-index: 2;
+      display: block;
+      width: 80px;
+      height: 80px;
+
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+    }
+
+    &--opened .main-nav__toggle::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 28px;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 14px;
+      background-image: url("../../img/icon-menu-open.svg");
+      background-repeat: no-repeat;
+    }
+
+    &--closed .main-nav__toggle::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 28px;
+      transform: translateY(-50%);
+      width: 21px;
+      height: 21px;
+      background-image: url("../../img/icon-menu-close.svg");
+      background-repeat: no-repeat;
+    }
+
+    &--closed .main-nav__list--site {
+      display: none;
+    }
+
+    &--closed .main-nav__list--user {
+      display: none;
+    }
+
+    &--nojs .main-nav__list--site {
+      display: block;
+    }
+
+    &--nojs .main-nav__list--user {
+      display: block;
+    }
+
+    &--nojs .main-nav__toggle {
+    display: none;
+    }
+
+    &--nojs .main-nav__list--site {
+      display: block;
+    }
+
+    &--nojs .main-nav__list--user {
+      display: block;
+    }
+  }
+}
+
+
+
 @media (min-width: @tablet-width) {
   .main-nav {
     display: flex;
     flex-wrap: wrap;
-    position: relative;
+
+    &__toggle {
+      display: none;
+    }
 
     &__logo {
       width: 167px;
