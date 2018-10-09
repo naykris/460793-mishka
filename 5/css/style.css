@@ -574,14 +574,6 @@ img {
   color: #000000;
 }
 @media (min-width: 768px) {
-  .catalog__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
   .catalog__item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -601,6 +593,14 @@ img {
   }
 }
 @media (min-width: 1150px) {
+  .catalog__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .catalog__item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
