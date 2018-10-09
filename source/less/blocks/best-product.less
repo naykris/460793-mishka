@@ -1,24 +1,118 @@
 .best-product {
-  padding: 27px 30px;  /*временно*/
+  position: relative;
+  padding: 27px 0 0;
   box-sizing: border-box;
+
+  &__header {
+    margin-bottom: 18px;
+  }
+
+  &__index {
+    line-height: 24px;
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  &__table {
+    border-collapse: collapse;
+    margin-bottom: 29px;
+  }
+
+  &__table tr {
+    border-bottom: 1px solid rgba(@grey, 0.1);
+  }
+
+  &__table td {
+    padding: 8px 0;
+  }
+
+  &__table td:first-child {
+    width: 97px;
+  }
+
+  &__price {
+    margin: 16px 0 27px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 700;
+  }
 }
 
-.best-product__index {
-  line-height: 24px;
+@media (min-width: @tablet-width) {
+  .best-product {
+    padding: 45px 0 50px;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 60px;
+    }
+
+    &__title {
+      width: 100%;
+    }
+
+    &__subtitle {
+      align-self: center;
+      text-align: center;
+    }
+
+    &__index {
+      width: 50%;
+      position: relative;
+    }
+
+    &__text {
+      margin: 0;
+    }
+
+    &__pic {
+      position: absolute;
+      right: -100%;
+      top: 0;
+    }
+
+    &__price {
+      font-size: 20px;
+    }
+  }
 }
 
-.best-product__text {
-  margin: 20px 0;
-}
+@media (min-width: @desktop-width) {
+  .best-product {
+    padding: 122px 0 80px;
+    padding-left: 170px;
 
-.best-product__table td {
-  .reset();
-}
+    &__header {
+      position: relative;
+    }
 
-.best-product__price {
-  margin: 18px 0 26px;
-  text-align: center;
-  font-size: 17px;
-  line-height: 24px;
-  font-weight: 700;
+    &__subtitle {
+      position: absolute;
+      top: 13px;
+      left: -132px;
+      width: 90px;
+      line-height: 17px;
+    }
+
+    &__index {
+      width: 100%;
+      padding-right: 525px;
+      box-sizing: border-box;
+    }
+
+    &__text {
+      margin: 0;
+    }
+
+    &__pic {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
 }

@@ -1,7 +1,12 @@
 .title {
-  margin: 0;
-  line-height: 30px;
+  margin: 0 auto;
   font-weight: 700;
+
+  &--page,
+  &--section,
+  &--contacts {
+    line-height: 30px;
+  }
 
   &--page {
     font-size: 27px;
@@ -13,5 +18,36 @@
 
   &--contacts {
     font-size: 18px;
+  }
+
+  &--small {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .title {
+    &--page,
+    &--section,
+    &--contacts {
+      font-size: 43px;
+      line-height: 50px;
+    }
+
+    &--small {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .title {
+    &--page,
+    &--section,
+    &--contacts {
+      font-size: 53px;
+      line-height: 57px;
+    }
   }
 }

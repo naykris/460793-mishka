@@ -1,4 +1,18 @@
 .page-header {
-  padding: 20px 30px; /*временно*/
+  margin: 0 auto;
   box-sizing: border-box;
+}
+
+@media (max-width: @mobile-width-only) {
+  .page-header__container {
+    padding: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    height: 88px;/* ?? */
+    min-width: 768px;
+    border-bottom: 1px solid rgba(@grey, 0.1);
+  }
 }
