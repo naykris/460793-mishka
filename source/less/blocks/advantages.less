@@ -1,5 +1,5 @@
 .advantages {
-  padding: 42px 0;
+  padding: 30px 0;
   box-sizing: border-box;
 
   &__list {
@@ -7,42 +7,99 @@
   }
 
   &__item {
+    position: relative;
     padding-top: 83px;
     font-size: 17px;
     line-height: 20px;
     font-weight: 700;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 55px;
+      height: 38px;
+      top: 40%;
+      left: -2%;
+      transform: translateY(-50%);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &--flower::before {
+//      width: 32px;
+//      height: 38px;
+      background-image: url("../../img/icon-feature-flower.svg");
+    }
+
+    &--money::before {
+//      width: 47px;
+//      height: 28px;
+      background-image: url("../../img/icon-feature-money.svg");
+
+    }
+
+    &--heart::before {
+//      width: 34px;
+//      height: 28px;
+      background-image: url("../../img/icon-feature-heart.svg");
+    }
+
+    &--ball::before {
+//      width: 34px;
+//      height: 28px;
+      background-image: url("../../img/icon-feature-ball.svg");
+    }
+
+    &--rocket::before {
+//      width: 55px;
+//      height: 24px;
+      background-image: url("../../img/icon-feature-rocket.svg");
+    }
+
+    &--gift::before {
+//      width: 33px;
+//      height: 33px;
+      background-image: url("../../img/icon-feature-gift.svg");
+    }
   }
 }
 
 @media (min-width: @tablet-width) {
   .advantages {
-    padding: 70px 0;
+    padding: 50px 0px;
 
     &__list {
       display: flex;
       flex-wrap: wrap;
+      margin-top: -10px;
     }
 
     &__item {
       width: 50%;
-      max-width: 350px;
-      padding-top: 105px;
+      padding-top: 112px;
       font-size: 20px;
       line-height: 22px;
 
-      &:nth-child(2) {
+      &::before {
+        top: 48%;
+        left: -1%;
+      }
+
+      &--money {
         order: 3;
       }
 
-      &:nth-child(3) {
+      &--heart {
         order: 5;
       }
 
-      &:nth-child(5) {
+      &--rocket {
         order: 4;
       }
 
-      &:nth-child(6) {
+      &--gift {
         order: 6;
       }
     }
@@ -51,10 +108,10 @@
 
 @media (min-width: @desktop-width) {
   .advantages {
-    padding: 70px 175px;
+    padding: 60px 175px 0;
 
     &__item {
-      padding-top: 105px;
+      padding-top: 111px;
     }
   }
 }
