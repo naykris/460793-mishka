@@ -33,8 +33,13 @@
     width: 97px;
   }
 
+  &__pic {
+    margin-bottom: 16px;
+  }
+
   &__price {
-    margin: 16px 0 27px;
+    display: block;
+    margin-bottom: 27px;
     text-align: center;
     font-size: 17px;
     line-height: 24px;
@@ -44,11 +49,12 @@
 
 @media (min-width: @tablet-width) {
   .best-product {
-    padding: 45px 0 50px;
+    padding: 43px 0;
 
     &__header {
       display: flex;
-      justify-content: space-between;
+      margin-left: -3px;
+      align-items: center;
       margin-bottom: 60px;
     }
 
@@ -57,23 +63,46 @@
     }
 
     &__subtitle {
-      align-self: center;
+      width: 155px;
+      display: block;
+      margin-right: 0;
+      padding-top: 8px;
       text-align: center;
     }
 
     &__index {
-      width: 50%;
+      display: flex;
       position: relative;
     }
 
+    &__wrapper {
+      width: 50%;
+      box-sizing: border-box;
+      padding-right: 45px;
+      flex-grow: 1;
+    }
+
     &__text {
-      margin: 0;
+      font-size: 17px;
+      line-height: 30px;
+      margin: -10px 0 37px;
     }
 
     &__pic {
+      width: 50%;
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    &__pic img {
+      width: 100%;/* временно */
+      height: 100%;/* временно */
+    }
+
+    &__wrapper--price {
       position: absolute;
-      right: -100%;
-      top: 0;
+      bottom: 0;
+      left: 0;
     }
 
     &__price {
@@ -85,34 +114,58 @@
 @media (min-width: @desktop-width) {
   .best-product {
     padding: 122px 0 80px;
-    padding-left: 170px;
 
     &__header {
-      position: relative;
+      width: 100%;
+
+    }
+
+    &__title {
+      order: 1;
+      width: 875px;
     }
 
     &__subtitle {
-      position: absolute;
-      top: 13px;
-      left: -132px;
-      width: 90px;
-      line-height: 17px;
-    }
-
-    &__index {
-      width: 100%;
-      padding-right: 525px;
+      width: 175px;
       box-sizing: border-box;
+      padding: 8px 30px 0;
     }
 
-    &__text {
-      margin: 0;
+    &__wrapper {
+      padding-left: 175px;
+      padding-right: 55px;
+    }
+
+     &__text {
+      margin-bottom: 47px;
     }
 
     &__pic {
-      position: absolute;
-      right: 0;
-      top: 0;
+      width: 525px;
+      height: 636px;
+      margin-top: -168px;
+      z-index: -1;
     }
+
+     &__pic img {
+      width: 100%;/* временно */
+      height: 100%;/* временно */
+    }
+
+    &__price {
+      margin-bottom: 33px;
+    }
+//
+//
+//
+//    &__text {
+//      margin: 0;
+//    }
+//
+//    &__pic {
+//      position: absolute;
+//      right: 0;
+//      top: 0;
+//    }
   }
 }
