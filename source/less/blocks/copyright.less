@@ -1,14 +1,27 @@
 .copyright {
+  padding: 18px 38px;
   display: flex;
-  padding: 30px 0;
-  justify-content: space-between;
   align-items: center;
 
   &__text {
     margin: 0;
+    margin-right: 29px;
     font-size: 19px;
     line-height: 18px;
     font-weight: 700;
-    color: @black;
+  }
+
+  &__link {
+    .reset-link();
+    line-height: 0;
+
+    &:hover svg path,
+    &:focus svg path {
+      fill: @puertorico;
+    }
+
+    &:active svg {
+      opacity: 0.3;
+    }
   }
 }
