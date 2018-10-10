@@ -123,22 +123,20 @@
 }
 
 @media (min-width: @desktop-width) {
-  .products {
-    &::after {
-      bottom: -20px;
-      height: 34px;
-      background: url("../../img/bg-zigzag-fill.svg") repeat-x;
-      background-size: auto;
-    }
+  .products::after {
+    bottom: -20px;
+    height: 34px;
+    background: url("../../img/bg-zigzag-fill.svg") repeat-x;
+    background-size: auto;
+  }
 
-    &__title--index {
-      background-image: url("../../img/hero-desktop@1x.jpg");
-      background-position: center top;
-    }
+  &__title--index {
+    background-image: url("../../img/hero-desktop@1x.jpg");
+    background-position: center top;
+  }
 
-    &__list {
-z      margin: 0 auto;
-      padding: 0;
-    }
+  &__list {
+    margin: 0 auto;
+    padding: 0;
   }
 }

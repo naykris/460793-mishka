@@ -447,8 +447,6 @@ img {
 .advantages__item::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
   width: 55px;
   height: 38px;
   top: 40%;
@@ -478,7 +476,7 @@ img {
 }
 @media (min-width: 768px) {
   .advantages {
-    padding: 50px 0px;
+    padding: 50px 0;
   }
   .advantages__list {
     display: -webkit-box;
@@ -1467,12 +1465,12 @@ img {
     background: url("../../img/bg-zigzag-fill.svg") repeat-x;
     background-size: auto;
   }
-  .products__title--index {
+  __title--index {
     background-image: url("../../img/hero-desktop@1x.jpg");
     background-position: center top;
   }
-  .products__list {
-    zmargin: 0 auto;
+  __list {
+    margin: 0 auto;
     padding: 0;
   }
 }
