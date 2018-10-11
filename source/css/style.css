@@ -915,13 +915,18 @@ img {
   }
 }
 .copyright {
-  padding: 18px 38px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 18px 38px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .copyright__text {
   margin: 0;
@@ -940,6 +945,20 @@ img {
 }
 .copyright__link:active svg {
   opacity: 0.3;
+}
+@media (min-width: 768px) {
+  .copyright {
+    width: 25%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 0;
+  }
+}
+@media (min-width: 1150px) {
+  .copyright {
+    width: 200px;
+  }
 }
 .form {
   padding: 20px 30px;
@@ -1366,24 +1385,35 @@ img {
 }
 @media (min-width: 768px) {
   .page-footer {
-    padding: 0;
+    padding: 42px 0;
   }
   .page-footer__container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
   .page-footer__logo {
+    width: 25%;
     display: block;
   }
+  .page-footer__logo:hover svg path,
+  .page-footer__logo:focus svg path {
+    fill: #63d1bb;
+  }
+  .page-footer__logo:active svg {
+    opacity: 0.3;
+  }
 }
-@media (min-width: 768px) {
-  .page-footer {
-    padding: 0;
+@media (min-width: 1150px) {
+  .page-footer__logo {
+    width: 200px;
   }
 }
 .page-header {
@@ -1542,9 +1572,11 @@ img {
   }
 }
 .reviews {
-  padding: 29px 0 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+.reviews__wrapper {
+  padding: 29px 0 50px;
 }
 .reviews__title {
   margin-bottom: 23px;
@@ -1613,8 +1645,10 @@ img {
   background-image: url("../../img/icon-right-arrow.svg");
 }
 @media (min-width: 768px) {
-  .reviews {
-    padding: 110px 0 100px;
+  .reviews .container {
+    background-image: url("../../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: left 30px;
   }
   .reviews__wrapper {
     display: -webkit-box;
@@ -1622,6 +1656,7 @@ img {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding: 110px 0 100px;
     -ms-flex-line-pack: center;
         align-content: center;
   }
@@ -1669,10 +1704,11 @@ img {
   }
 }
 @media (min-width: 1150px) {
-  .reviews {
-    padding: 160px 0;
+  .reviews .container {
+    background-position: left center;
   }
   .reviews__wrapper {
+    padding: 160px 0;
     padding-left: 175px;
   }
   .reviews__text {
@@ -1690,14 +1726,17 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
   border-bottom: 1px solid rgba(68, 68, 68, 0.1);
-  padding: 27px 0 18px;
 }
 .social__item {
-  margin-right: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1707,12 +1746,14 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-.social__item:last-child {
-  margin-right: 0;
+  margin: 0 17px;
+  padding: 27px 0;
 }
 .social__link {
   text-decoration: none;
+  line-height: 0;
+  text-align: center;
+  width: 25px;
 }
 .social__link:hover svg path,
 .social__link:focus svg path {
@@ -1722,11 +1763,13 @@ img {
   opacity: 0.3;
 }
 @media (min-width: 768px) {
-  .social__item {
-    margin-right: 40px;
+  .social {
+    width: auto;
+    padding: 0;
+    border-bottom: none;
   }
-  .social__item:last-child {
-    margin-right: 0;
+  .social__item {
+    padding: 17px 0;
   }
 }
 .subtitle {

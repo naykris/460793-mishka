@@ -1,7 +1,9 @@
 .copyright {
-  padding: 18px 38px;
   display: flex;
+  justify-content: center;
   align-items: center;
+  padding: 18px 38px;
+  box-sizing: border-box;
 
   &__text {
     margin: 0;
@@ -23,5 +25,19 @@
     &:active svg {
       opacity: 0.3;
     }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    width: 25%;
+    justify-content: flex-end;
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright {
+    width: 200px;
   }
 }

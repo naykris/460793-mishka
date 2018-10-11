@@ -1,6 +1,9 @@
 .reviews {
-  padding: 29px 0 50px;
   box-sizing: border-box;
+
+   &__wrapper {
+    padding: 29px 0 50px;
+  }
 
   &__title {
     margin-bottom: 23px;
@@ -77,11 +80,16 @@
 
 @media (min-width: @tablet-width) {
   .reviews {
-    padding: 110px 0 100px;
+    .container {
+      background-image: url("../../img/review@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: left 30px;
+    }
 
     &__wrapper {
       display: flex;
       flex-wrap: wrap;
+      padding: 110px 0 100px;
       align-content: center;
     }
 
@@ -126,9 +134,12 @@
 
 @media (min-width: @desktop-width) {
   .reviews {
-    padding: 160px 0;
+    .container {
+      background-position: left center;
+    }
 
     &__wrapper {
+      padding: 160px 0;
       padding-left: 175px;
     }
 
