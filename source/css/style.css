@@ -1216,6 +1216,22 @@ img {
 .form__textarea:focus:-ms-input-placeholder {
   color: transparent;
 }
+.form__input-radio:not(:checked):hover + .form__label::before,
+.form__input-radio:not(:checked):focus + .form__label::before,
+.form__input-radio:checked:hover + .form__label::after,
+.form__input-radio:checked:focus + .form__label::after,
+.form__input-checkbox:not(:checked):hover + .form__label::before,
+.form__input-checkbox:not(:checked):focus + .form__label::before,
+.form__input-checkbox:checked:hover + .form__label::after,
+.form__input-checkbox:checked:focus + .form__label::after {
+  border: 2px solid #63d1bb;
+}
+.form__input-radio:not(:checked):active + .form__label::before,
+.form__input-radio:checked:active + .form__label::after,
+.form__input-checkbox:not(:checked):active + .form__label::before,
+.form__input-checkbox:checked:active + .form__label::after {
+  border: 2px solid rgba(68, 68, 68, 0.3);
+}
 .form__textarea {
   min-width: 260px;
   min-height: 142px;
@@ -2054,6 +2070,7 @@ img {
     background-position: center top;
   }
   .products__list {
+    width: 1050px;
     margin: 0 auto;
     padding: 0;
   }

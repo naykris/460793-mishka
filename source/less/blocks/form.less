@@ -186,6 +186,24 @@
     color: transparent;
   }
 
+  &__input-radio:not(:checked):hover + &__label::before,
+  &__input-radio:not(:checked):focus + &__label::before,
+  &__input-radio:checked:hover + &__label::after,
+  &__input-radio:checked:focus + &__label::after,
+  &__input-checkbox:not(:checked):hover + &__label::before,
+  &__input-checkbox:not(:checked):focus + &__label::before,
+  &__input-checkbox:checked:hover + &__label::after,
+  &__input-checkbox:checked:focus + &__label::after {
+    border: 2px solid @downy;
+  }
+
+  &__input-radio:not(:checked):active + &__label::before,
+  &__input-radio:checked:active + &__label::after,
+  &__input-checkbox:not(:checked):active + &__label::before,
+  &__input-checkbox:checked:active + &__label::after {
+    border: 2px solid rgba(@grey, 0.3);
+  }
+
   &__textarea {
     min-width: 260px;
     min-height: 142px;
