@@ -1,6 +1,5 @@
 body {
   min-width: 320px;
-  margin: 0 auto;
   padding: 0;
   font-family: @font-family;
   font-size: 15px;
@@ -16,7 +15,15 @@ img {
 }
 
 .container {
-  padding: 0 9.375%;
+  width: 81.25%;
+  margin: 0 auto;
+}
+
+
+@media (max-width: @mobile-width-only) {
+  .container-fixed {
+    width: 260px;
+  }
 }
 
 .underline-section {
@@ -37,7 +44,7 @@ img {
 
 @media (min-width: @tablet-width) {
   .container {
-    padding: 0 6.51%;
+    width: 86.98%;
   }
 
   .underline-section::after {
@@ -50,7 +57,6 @@ img {
   .container {
     width: 1050px;
     margin: 0 auto;
-    padding: 0;
   }
 
   .underline-section::after {
@@ -64,8 +70,13 @@ img {
 }
 
 .title {
-  margin: 0;
   font-weight: 700;
+
+  &--section,
+  &--contacts,
+  &--small {
+    margin: 0;
+  }
 
   &--page,
   &--section,

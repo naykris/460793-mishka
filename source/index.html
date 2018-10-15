@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="picturefill.js"></script>
   </head>
   <body>
     <header class="page-header">
@@ -52,7 +53,7 @@
     </header>
     <main class="page-main">
       <section class="products">
-        <h1 class="products__title products__title--index title--page title">Милые штуки ручной<br>работы для дома</h1>
+        <h1 class="products__title products__title--index title--page title container">Милые штуки ручной<br>работы для дома</h1>
         <ul class="products__list">
           <li class="products__item">
             <a class="products__link products__link--left" href="#">
@@ -67,7 +68,7 @@
         </ul>
       </section>
       <section class="best-product underline-section">
-        <div class="container">
+        <div class="container container-fixed">
           <header class="best-product__header">
             <h2 class="best-product__title title--section title">Вязаные корзинки</h2>
             <span class="best-product__subtitle subtitle">Товар недели</span>
@@ -91,7 +92,11 @@
                 </table>
               </div>
               <div class="best-product__pic">
-                <img src="img/triple-set-mobile@1x.jpg" alt="Изображение товара Вязаные корзинки" width="260" height="315">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+                  <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Изображение товара Вязаные корзинки">
+                </picture>
               </div>
               <div class="best-product__wrapper best-product__wrapper--price">
                 <span class="best-product__price">Цена: 990 руб.</span>
@@ -100,7 +105,7 @@
             </div>
           </div>
         </section>
-      <div class="container">
+      <div class="container container-fixed">
         <section class="advantages">
           <h2 class="advantages__title title--section title">Коротко о нас:</h2>
           <ul class="advantages__list">
@@ -146,9 +151,7 @@
             </table>
           </div>
         <div class="contacts__map"></div>
-        <div class="container">
-          <a href="#" class="contacts__btn btn">Напишите нам</a>
-        </div>
+        <a href="#" class="contacts__btn btn">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
@@ -196,7 +199,6 @@
         </div>
       </div>
     </footer>
-<!--
     <div class="modal">
       <h2 class="modal__title title--section title">Добавить<br>в корзину</h2>
       <span class="modal__text">Выберите размер:</span>
@@ -216,7 +218,6 @@
       </ul>
         <a href="#" class="modal__btn btn">Добавить</a>
     </div>
--->
     <script>
       var navMain = document.querySelector('.main-nav');
       var navToggle = document.querySelector('.main-nav__toggle');

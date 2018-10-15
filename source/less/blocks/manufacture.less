@@ -6,11 +6,18 @@
   border: 1px solid @whisper;
 
   &__video {
-    width: 320px;
-    line-height: 0;
+    min-height: 150px;
     position: relative;
     margin: 0 auto;
-    margin-bottom: 28px;
+    margin-bottom: 30px;
+    background-image: url("../../img/video-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../../img/video-mobile@2x.jpg");
+      background-size: 260px;
+    }
   }
 
   &__play {
@@ -51,12 +58,29 @@
     font-size: 13px;
     line-height: 24px;
   }
+
+  &__btn {
+    max-width: 320px;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .manufacture {
     padding: 0 0 46px;
     margin-bottom: 63px;
+
+    &__video {
+      min-height: 455px;
+      background-image: url("../../img/video-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../../img/video-tablet@2x.jpg");
+        background-size: 668px;
+      }
+    }
 
     &__title {
       position: relative;
@@ -67,15 +91,6 @@
       &::before {
         top: -5px;
         left: 0;
-      }
-    }
-
-    &__video {
-      margin-bottom: 37px;
-
-      img {
-        width: 668px;
-        height: 455px;
       }
     }
 
