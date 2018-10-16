@@ -17,15 +17,20 @@
     .reset-link();
     line-height: 0;
 
-    &:hover svg path,
-    &:focus svg path {
+    &:hover .copyright__icon,
+    &:focus .copyright__icon {
       fill: @puertorico;
     }
 
-    &:active svg {
+    &:active {
       opacity: 0.3;
     }
   }
+
+  &__icon {
+    fill: @downy;
+  }
+
 }
 
 @media (min-width: @tablet-width) {

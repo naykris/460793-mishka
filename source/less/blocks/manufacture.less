@@ -108,17 +108,22 @@
 
 @media (min-width: @desktop-width) {
   .manufacture {
+    display: flex;
     padding-bottom: 0;
     margin-bottom: 104px;
-    display: flex;
 
     &__video {
+      min-width: 682px;
       margin-bottom: 0;
+      background-image: url("/../../img/video-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
 
-      img {
-        width: 683px;
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("/../../img/video-desktop@2x.jpg");
+        background-size: 682px;
+        }
       }
-    }
 
     &__info {
       width: 350px;

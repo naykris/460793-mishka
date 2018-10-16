@@ -25,16 +25,12 @@
     color: @black;
     vertical-align: top;
 
-    [href]&:hover,
-    [href]&:focus {
+    &[href]:hover,
+    &[href]:focus {
       color: rgba(@black, 0.6);
-
-      svg path {
-        fill: @downy;
-      }
     }
 
-    [href]&:active {
+    &[href]:active {
       opacity: 0.3;
     }
   }
