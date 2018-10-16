@@ -10,6 +10,19 @@
   &__logo {
     display: none;
   }
+
+  &__icon {
+    fill: @black;
+    }
+
+  a[href]:focus .page-footer__icon,
+  a[href]:hover .page-footer__icon {
+    fill: @downy;
+  }
+
+  a[href]:active .page-footer__icon {
+    fill: rgba(@black, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -25,11 +38,6 @@
     &__logo {
       width: 25%;
       display: block;
-
-
-      &:active {
-        opacity: 0.3;
-      }
     }
   }
 }

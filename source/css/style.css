@@ -423,14 +423,14 @@ img {
   }
 }
 .icon {
-  fill: #231f20;
+  fill: rgba(0, 0, 0, 0.2);
 }
 a[href]:focus .icon,
 a[href]:hover .icon {
   fill: #63d1bb;
 }
 a[href]:active .icon {
-  fill: #231f20;
+  fill: rgba(0, 0, 0, 0.2);
 }
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
@@ -1964,6 +1964,16 @@ a[href]:active .icon {
 .page-footer__logo {
   display: none;
 }
+.page-footer__icon {
+  fill: #000000;
+}
+.page-footer a[href]:focus .page-footer__icon,
+.page-footer a[href]:hover .page-footer__icon {
+  fill: #63d1bb;
+}
+.page-footer a[href]:active .page-footer__icon {
+  fill: rgba(0, 0, 0, 0.3);
+}
 @media (min-width: 768px) {
   .page-footer {
     padding: 42px 0;
@@ -1983,9 +1993,6 @@ a[href]:active .icon {
   .page-footer__logo {
     width: 25%;
     display: block;
-  }
-  .page-footer__logo:active {
-    opacity: 0.3;
   }
 }
 @media (min-width: 1150px) {
@@ -2360,9 +2367,6 @@ a[href]:active .icon {
   line-height: 0;
   text-align: center;
   width: 25px;
-}
-.social__link:active {
-  opacity: 0.3;
 }
 @media (min-width: 768px) {
   .social {
