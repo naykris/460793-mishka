@@ -844,7 +844,6 @@ a[href]:active .icon {
             flex-grow: 1;
     width: 100%;
     padding-top: 26px;
-    border-left: 1px solid #ececec;
   }
   .catalog__buy {
     margin-left: 0;
