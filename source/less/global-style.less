@@ -15,7 +15,7 @@ img {
 }
 
 .container {
-  width: 81.25%;
+  width: @mobile;
   margin: 0 auto;
 }
 
@@ -44,7 +44,7 @@ img {
 
 @media (min-width: @tablet-width) {
   .container {
-    width: 86.98%;
+    width: @tablet;
   }
 
   .underline-section::after {
@@ -63,7 +63,7 @@ img {
     left: 50%;
     transform: translateX(-50%);
     height: 23px;
-    width: 1050px;
+    width: @desktop;
     background-size: auto 23px;
     background-repeat: no-repeat;
   }

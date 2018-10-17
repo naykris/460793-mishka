@@ -14,16 +14,15 @@
   }
 
   &__item {
-    padding: 25px 0 29px 23.5%;
-    vertical-align: top;
-    border-top: 1px solid rgba(@grey, 0.1);
     position: relative;
   }
 
   &__link {
     .reset-link();
+    display: inline-block;
+    padding: 25px 0 29px 23.5%;
     color: @black;
-    vertical-align: top;
+    border-top: 1px solid rgba(@grey, 0.1);
 
     &[href]:hover,
     &[href]:focus {
@@ -74,7 +73,7 @@
     &__toggle {
       position: absolute;
       top: 0;
-      right: -30px;
+      right: 0;
 
       z-index: 2;
       display: block;
@@ -138,6 +137,10 @@
     &--nojs .main-nav__list--user {
       display: block;
     }
+
+    &__link {
+      width: 100%;
+    }
   }
 }
 
@@ -165,7 +168,6 @@
       display: flex;
       border-bottom: none;
 
-
       &--site {
         width: 100%;
         order: 2;
@@ -187,7 +189,8 @@
       left: 33px;
     }
 
-    &__item {
+    &__link {
+      display: flex;
       border-top: none;
 
       &--site {
@@ -200,10 +203,6 @@
         box-sizing: border-box;
         border-left: 1px solid rgba(@grey, 0.1);
       }
-    }
-
-    &__link {
-      display: flex;
 
       &--search {
         min-width: 82px;
@@ -260,22 +259,24 @@
       }
     }
 
-    &__item {
+    &__item:first-child {
+      .main-nav__link--site {
+        border-right: 1px solid rgba(@grey, 0.1);
+      }
+
+      .main-nav__link--site,
+      .main-nav__link--desktop {
+        padding-left: 0;
+      }
+    }
+
+    &__link {
       &--site {
         padding: 30px 35px 33px;
-
-        &:first-child {
-          padding-left: 0;
-          border-right: 1px solid rgba(@grey, 0.1);
-        }
       }
 
       &--desktop {
         padding: 19px 30px;
-
-        &:first-child {
-          padding-left: 0;
-        }
       }
     }
   }
