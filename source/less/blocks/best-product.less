@@ -16,8 +16,9 @@
   }
 
   &__table {
-    border-collapse: collapse;
+    width: 100%;
     margin-bottom: 29px;
+    border-collapse: collapse;
   }
 
   &__table tr {
@@ -33,6 +34,7 @@
   }
 
   &__pic {
+    text-align: center;
     margin-bottom: 16px;
   }
 
@@ -86,21 +88,12 @@
       margin: -10px 0 35px;
     }
 
-    &__table {
-      width: 100%;
-    }
-
     &__pic {
       width: 50%;
       margin: 0;
       flex-grow: 1;
       line-height: 0;
-      background-color: red;
-    }
-
-    &__pic img {
-      height: 100%;/* временно */
-      width: 100%;/* временно */
+      text-align: right;
     }
 
     &__wrapper--price {
@@ -147,11 +140,6 @@
     &__pic {
       margin-top: -168px;
       z-index: -1;
-    }
-
-    &__pic img {
-      width: 525px;
-      height: 636px;
     }
 
     &__price {

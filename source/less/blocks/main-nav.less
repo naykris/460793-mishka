@@ -14,27 +14,22 @@
   }
 
   &__item {
-    padding: 25px 0 29px 23.5%;
-    vertical-align: top;
-    border-top: 1px solid rgba(@grey, 0.1);
     position: relative;
   }
 
   &__link {
     .reset-link();
+    display: inline-block;
+    padding: 25px 0 29px 23.5%;
     color: @black;
-    vertical-align: top;
+    border-top: 1px solid rgba(@grey, 0.1);
 
-    [href]&:hover,
-    [href]&:focus {
+    &[href]:hover,
+    &[href]:focus {
       color: rgba(@black, 0.6);
-
-      svg path {
-        fill: @downy;
-      }
     }
 
-    [href]&:active {
+    &[href]:active {
       opacity: 0.3;
     }
   }
@@ -99,7 +94,7 @@
       width: 21px;
       height: 21px;
 
-      background-image: url("../../img/icon-menu-close.svg");
+      background-image: url("../img/icon-menu-close.svg");
       background-repeat: no-repeat;
     }
 
@@ -111,7 +106,7 @@
       transform: translateY(-50%);
       width: 22px;
       height: 14px;
-      background-image: url("../../img/icon-menu-open.svg");
+      background-image: url("../img/icon-menu-open.svg");
       background-repeat: no-repeat;
     }
 
@@ -142,6 +137,10 @@
     &--nojs .main-nav__list--user {
       display: block;
     }
+
+    &__link {
+      width: 100%;
+    }
   }
 }
 
@@ -169,7 +168,6 @@
       display: flex;
       border-bottom: none;
 
-
       &--site {
         width: 100%;
         order: 2;
@@ -191,7 +189,8 @@
       left: 33px;
     }
 
-    &__item {
+    &__link {
+      display: flex;
       border-top: none;
 
       &--site {
@@ -204,10 +203,6 @@
         box-sizing: border-box;
         border-left: 1px solid rgba(@grey, 0.1);
       }
-    }
-
-    &__link {
-      display: flex;
 
       &--search {
         min-width: 82px;
@@ -264,22 +259,24 @@
       }
     }
 
-    &__item {
+    &__item:first-child {
+      .main-nav__link--site {
+        border-right: 1px solid rgba(@grey, 0.1);
+      }
+
+      .main-nav__link--site,
+      .main-nav__link--desktop {
+        padding-left: 0;
+      }
+    }
+
+    &__link {
       &--site {
         padding: 30px 35px 33px;
-
-        &:first-child {
-          padding-left: 0;
-          border-right: 1px solid rgba(@grey, 0.1);
-        }
       }
 
       &--desktop {
         padding: 19px 30px;
-
-        &:first-child {
-          padding-left: 0;
-        }
       }
     }
   }

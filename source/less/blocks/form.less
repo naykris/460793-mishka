@@ -3,6 +3,7 @@
 
   &__text {
     display: block;
+    margin-bottom: 22px;
     font-size: 13px;
     line-height: 24px;
   }
@@ -11,28 +12,10 @@
     margin: 0;
     padding: 0;
     border: none;
-    box-sizing: border-box;
-
-    &--type {
-      padding: 22px 0 10px;
-    }
-
-    &--color {
-      padding: 20px 0 20px;
-    }
-
-    &--name {
-      margin-bottom: 20px;
-    }
-
-    &--textarea {
-      margin-bottom: 15px;
-    }
   }
 
   &__subtitle {
     display: block;
-    margin-bottom: 20px;
     position: relative;
 
     &::after {
@@ -44,50 +27,43 @@
       height: 1px;
       background-color: @downy;
     }
-
-    &--contacts {
-      margin-bottom: 0;
-    }
-
-    &--name {
-      margin-bottom: 32px;
-    }
   }
 
   &__list {
     .reset-list();
     display: flex;
     flex-direction: column;
+    padding: 22px 0 28px;
+  }
+
+  &__item--filter {
+    margin-bottom: 21px;
+
+    label {
+      align-items: center;
+      min-height: 40px;
+      padding-left: 63px;
+    }
   }
 
   &__item--name {
-    margin-bottom: 20px;
+    padding-top: 8px;
+    margin-bottom: 17px;
   }
 
   &__item--contacts {
-    margin-bottom: 35px;
     position: relative;
+    padding-top: 5px;
+    margin-bottom: 32px;
   }
 
-  &__label {
+  label {
     display: flex;
     position: relative;
-    padding: 0; /*????????????????*/
-    margin: 0;
     font-size: 17px;
     line-height: 18px;
     font-weight: 700;
     color: @black;
-
-    &--type {
-      padding: 11px 0;
-      padding-left: 63px;
-    }
-
-    &--color {
-      padding: 21px 0;
-      padding-left: 63px;
-    }
   }
 
   &__field {
@@ -107,8 +83,8 @@
       border-bottom: 2px solid @downy;
     }
 
-    &:focus ~ .form__icon path,
-    &:hover ~ .form__icon path {
+    &:focus ~ .form__icon,
+    &:hover ~ .form__icon {
       fill: @downy;
       opacity: 1;
     }
@@ -126,10 +102,10 @@
     opacity: 0;
   }
 
-  &__input-radio:not(:checked) + &__label::before,
-  &__input-radio:checked + &__label::after,
-  &__input-checkbox:not(:checked) + &__label::before,
-  &__input-checkbox:checked + &__label::after {
+  &__input-radio:not(:checked) + label::before,
+  &__input-radio:checked + label::after,
+  &__input-checkbox:not(:checked) + label::before,
+  &__input-checkbox:checked + label::after {
     content: "";
     position: absolute;
 
@@ -144,24 +120,24 @@
     cursor: pointer;
   }
 
-  &__input-radio:not(:checked) + &__label::before,
-  &__input-radio:checked + &__label::after {
+  &__input-radio:not(:checked) + label::before,
+  &__input-radio:checked + label::after {
     border-radius: 50%;
     background-color: transparent;
   }
 
-  &__input-radio:checked + &__label::after {
+  &__input-radio:checked + label::after {
     background-color: @downy;
     box-shadow: inset 0 0 0 12px @white;
     border-radius: 50%;
   }
 
-  &__input-checkbox:not(:checked) + &__label::before {
+  &__input-checkbox:not(:checked) + label::before {
     background-color: transparent;
   }
 
-  &__input-checkbox:checked + &__label::after {
-    background-image: url("../../img/icon-tick.svg");
+  &__input-checkbox:checked + label::after {
+    background-image: url("../img/icon-tick.svg");
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -186,26 +162,28 @@
     color: transparent;
   }
 
-  &__input-radio:not(:checked):hover + &__label::before,
-  &__input-radio:not(:checked):focus + &__label::before,
-  &__input-radio:checked:hover + &__label::after,
-  &__input-radio:checked:focus + &__label::after,
-  &__input-checkbox:not(:checked):hover + &__label::before,
-  &__input-checkbox:not(:checked):focus + &__label::before,
-  &__input-checkbox:checked:hover + &__label::after,
-  &__input-checkbox:checked:focus + &__label::after {
+  &__input-radio:not(:checked):hover + label::before,
+  &__input-radio:not(:checked):focus + label::before,
+  &__input-radio:checked:hover + label::after,
+  &__input-radio:checked:focus + label::after,
+  &__input-checkbox:not(:checked):hover + label::before,
+  &__input-checkbox:not(:checked):focus + label::before,
+  &__input-checkbox:checked:hover + label::after,
+  &__input-checkbox:checked:focus + label::after {
     border: 2px solid @downy;
   }
 
-  &__input-radio:not(:checked):active + &__label::before,
-  &__input-radio:checked:active + &__label::after,
-  &__input-checkbox:not(:checked):active + &__label::before,
-  &__input-checkbox:checked:active + &__label::after {
+  &__input-radio:not(:checked):active + label::before,
+  &__input-radio:checked:active + label::after,
+  &__input-checkbox:not(:checked):active + label::before,
+  &__input-checkbox:checked:active + label::after {
     border: 2px solid rgba(@grey, 0.3);
   }
 
   &__textarea {
+    margin: 23px 0 12px;
     min-width: 260px;
+    width: 100%;
     min-height: 142px;
     padding: 15px;
     font-size: 17px;
@@ -229,6 +207,17 @@
 
   &__btn {
     width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .form__item--filter,
+  .form__item--name {
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -243,36 +232,30 @@
     }
 
     &__container {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    &__fieldset {
-      &--type {
-        padding: 65px 0 10px;
-      }
-
-      &--color {
-        padding: 70px 0 15px;
-      }
-
-      &--name {
-        margin: 0;
-        padding: 65px 0 15px;
-      }
+      padding: 65px 0 25px;
 
       &--contacts {
-        padding: 65px 0 10px;
+        padding-bottom: 52px;
       }
 
-      &--textarea {
-        margin: 0;
-        padding: 65px 0 15px;
+      &--submit {
+        display: flex;
+        margin-top: 30px;
       }
+    }
 
-      &--grey {
-        background-color: @whitesmoke;
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-content: flex-start;
+
+      &--contacts {
+        padding-bottom: 40px;
       }
+    }
+
+    &__fieldset--grey {
+      background-color: @whitesmoke;
     }
 
     &__subtitle {
@@ -284,85 +267,86 @@
     }
 
     &__list {
-      width: 75%;
       flex-wrap: wrap;
       flex-direction: row;
       justify-content: space-between;
+      width: 75%;
+      padding: 0;
+      margin-top: -13px;
     }
 
     &__item {
-      display: flex;
       width: 100%;
+      display: flex;
+
+      &--filter {
+        margin-bottom: 35px;
+
+        label {
+          padding-left: 78px;
+        }
+      }
 
       &--color {
         width: 48%;
       }
 
       &--name {
-        margin-bottom: 40px;
+        padding: 0;
+        margin-bottom: 25px;
+        align-items: center;
+
+        label {
+          padding-right: 25px;
+        }
       }
 
       &--contacts {
+        padding: 0;
         padding-left: 42px;
-        margin-bottom: 40px;
+        margin: 0;
+        margin-top: -15px;
+        align-items: flex-start;
       }
 
       &--textarea {
         padding-left: 42px;
-        margin-top: -17px;
-        margin-bottom: 40px;
       }
     }
 
-    &__label {
+    label {
       display: inherit;
       font-size: 19px;
-
-      &--type {
-        padding: 0;
-        padding-left: 78px;
-        margin-bottom: 56px;
-      }
-
-      &--color {
-        padding: 0;
-        padding-left: 78px;
-        margin-bottom: 56px;
-      }
-
-      &--name {
-        padding-right: 25px;
-      }
     }
 
     &__field {
-      min-height: auto;
-      padding-bottom: 15px;
       padding-left: 16px;
       font-size: 19px;
     }
 
     &__icon {
+      opacity: 0.3;
       position: absolute;
       right: 23px;
-      top: -25%;
+      top: 25%;
     }
 
-    &__input-radio:not(:checked) + &__label::before,
-    &__input-radio:checked + &__label::after,
-    &__input-checkbox:not(:checked) + &__label::before,
-    &__input-checkbox:checked + &__label::after {
+    &__input-radio:not(:checked) + label::before,
+    &__input-radio:checked + label::after,
+    &__input-checkbox:not(:checked) + label::before,
+    &__input-checkbox:checked + label::after {
       height: 48px;
       width: 48px;
     }
 
     &__textarea {
-      width: 100%;
       font-size: 19px;
+      margin: 0;
+      margin-top: -15px;
     }
 
     &__footnote {
-      order: 2;
+      order: 4;
       align-self: center;
       margin: 0;
       font-size: 17px;
@@ -370,9 +354,9 @@
     }
 
     &__btn {
-      width: auto;
-      padding: 14px 30px;
-      margin-right: auto;
+      max-width: 230px;
+      margin-left: 0;
+      order: 1;
     }
   }
 }
@@ -390,10 +374,6 @@
       padding: 0 175px;
     }
 
-    &__fieldset--textarea {
-      padding: 65px 0 10px;
-    }
-
     &__subtitle {
       width: calc(100% / 6);
       padding-left: 63px;
@@ -409,8 +389,8 @@
       width: 30%;
     }
 
-    &__item--contacts,
     &__item--name,
+    &__item--contacts,
     &__item--textarea {
       margin-right: 175px;
     }
