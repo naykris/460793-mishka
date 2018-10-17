@@ -12,7 +12,7 @@
     <header class="page-header">
       <div class="page-header__container">
         <nav class="main-nav main-nav--closed main-nav--nojs">
-          <a class="main-nav__logo">
+          <a class="main-nav__logo" href="index.html">
             <picture>
               <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -64,101 +64,103 @@
         <div class="container">
           <span class="form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</span>
         </div>
-        <fieldset class="form__fieldset form__fieldset--type">
-          <div class="container form__container">
+        <fieldset class="form__fieldset">
+          <div class="container form__container form__wrapper">
             <span class="form__subtitle subtitle">Тип</span>
             <ul class="form__list">
-              <li class="form__item">
+              <li class="form__item form__item--filter">
                 <input class="form__input-radio" type="radio" id="accessory-type" name="type" value="accessory" checked>
-                <label class="form__label form__label--type" for="accessory-type">Аксессуар для интерьера</label>
+                <label for="accessory-type">Аксессуар для интерьера</label>
               </li>
-              <li class="form__item">
+              <li class="form__item form__item--filter">
                 <input class="form__input-radio" type="radio" id="toy-type" name="type" value="toy">
-                <label class="form__label form__label--type" for="toy-type">Детская игрушка</label>
+                <label for="toy-type">Детская игрушка</label>
               </li>
             </ul>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset form__fieldset--color form__fieldset--grey">
-          <div class="container form__container">
-            <span class="form__subtitle form__subtitle--color subtitle">Цвет</span>
+        <fieldset class="form__fieldset form__fieldset--grey">
+          <div class="container form__container form__wrapper">
+            <span class="form__subtitle subtitle">Цвет</span>
             <ul class="form__list">
-              <li class="form__item form__item--color">
+              <li class="form__item form__item--filter form__item--color">
                 <input class="form__input-checkbox" type="checkbox" id="white-color" name="color" value="white" checked>
-                <label class="form__label form__label--color" for="white-color">Белый</label>
+                <label for="white-color">Белый</label>
               </li>
-              <li class="form__item form__item--color">
+              <li class="form__item form__item--filter form__item--color">
                 <input class="form__input-checkbox" type="checkbox" id="gray-color" name="color" value="gray" checked>
-                <label class="form__label form__label--color" for="gray-color">Серый</label>
+                <label for="gray-color">Серый</label>
               </li>
-              <li class="form__item form__item--color">
+              <li class="form__item form__item--filter form__item--color">
                 <input class="form__input-checkbox" type="checkbox" id="tiffany-color" name="color" value="tiffany">
-                <label class="form__label form__label--color" for="tiffany-color">«Тиффани»</label>
+                <label for="tiffany-color">«Тиффани»</label>
               </li>
-              <li class="form__item form__item--color">
+              <li class="form__item form__item--filter form__item--color">
                 <input class="form__input-checkbox" type="checkbox" id="black-color" name="color" value="black">
-                <label class="form__label form__label--color" for="black-color">Черный</label>
+                <label for="black-color">Черный</label>
               </li>
-              <li class="form__item form__item--color">
+              <li class="form__item form__item--filter form__item--color">
                 <input class="form__input-checkbox" type="checkbox" id="pink-color" name="color" value="pink">
-                <label class="form__label form__label--color" for="pink-color">Розовый</label>
+                <label for="pink-color">Розовый</label>
               </li>
-              <li class="form__item form__item--color">
+              <li class="form__item form__item--filter form__item--color">
                 <input class="form__input-checkbox" type="checkbox" id="orange-color" name="color" value="orange">
-                <label class="form__label form__label--color" for="orange-color">Оранжевый</label>
+                <label for="orange-color">Оранжевый</label>
               </li>
             </ul>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset form__fieldset--name">
-          <div class="container form__container">
-            <span class="form__subtitle form__subtitle--name subtitle">ФИО</span>
+        <fieldset class="form__fieldset">
+          <div class="container form__container form__wrapper">
+            <span class="form__subtitle subtitle">ФИО</span>
             <ul class="form__list">
               <li class="form__item form__item--name">
-                <label class="form__label form__label--name" for="first-name-field">Имя:</label>
+                <label for="first-name-field">Имя:</label>
                 <input class="form__field" id="first-name-field" type="text" name="first-name" value="" placeholder="Введите ваше имя*" required>
               </li>
               <li class="form__item form__item--name">
-                <label class="form__label form__label--name" for="last-name-field">Фамилия:</label>
+                <label for="last-name-field">Фамилия:</label>
                 <input class="form__field" id="last-name-field" type="text" name="last-name" value="" placeholder="Укажите фамилию*" required>
               </li>
               <li class="form__item form__item--name">
-                <label class="form__label form__label--name" for="patronymic-name-field">Отчество:</label>
+                <label for="patronymic-name-field">Отчество:</label>
                 <input class="form__field" id="patronymic-name-field" type="text" name="patronymic-name" value="" placeholder="Отчество, если желаете">
               </li>
             </ul>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset form__fieldset--contacts form__fieldset--grey">
-          <div class="container form__container">
-            <span class="form__subtitle form__subtitle--contacts subtitle">Тел</span>
-            <div class="form__item form__item--contacts">
-              <label class="visually-hidden" for="phone-field">Телефон</label>
-              <input class="form__field" id="phone-field" type="tel" name="phone" value="" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-              <svg class="form__icon" xmlns="http://www.w3.org/2000/svg" width="24.829" height="24.333">
-                <path opacity="0.3" fill="#000" d="M17.321 24.333h-1.115c-4.904-.58-8.497-2.857-11.11-5.772C2.473 15.637.402 11.875 0 6.817V5.459c.091-.921.544-1.55 1.067-2.086.65-.666 1.63-1.522 2.522-1.553.659-.022 1.78.451 2.232 1.066.388.53.595 1.59.775 2.378.185.797.6 1.95.485 2.717-.176 1.196-1.764 1.703-2.231 2.572 1.551 3.721 4.089 6.456 7.472 8.345.847-.465 1.595-1.864 2.767-1.892.428-.012.972.209 1.406.34.477.143.891.326 1.311.484.705.266 1.957.621 2.378 1.213.433.61.681 1.608.581 2.231-.194 1.234-2.227 2.603-3.444 3.059zM12.529 1.528c5.949 0 10.771 4.822 10.771 10.771h1.529C24.829 5.507 19.323 0 12.529 0v1.528z"/><path opacity="0.3" fill="#000" d="M12.529 9.327v1.552a1.42 1.42 0 0 1 1.421 1.42h1.553a2.973 2.973 0 0 0-2.974-2.972zM12.529 6.246a6.054 6.054 0 0 1 6.056 6.054h1.588a7.642 7.642 0 0 0-7.644-7.641v1.587z"/>
-              </svg>
+        <fieldset class="form__fieldset form__fieldset--grey">
+          <div class="container form__container form__container--contacts">
+            <div class="form__wrapper form__wrapper--contacts">
+              <span class="form__subtitle subtitle">Тел</span>
+              <div class="form__item form__item--contacts">
+                <label class="visually-hidden" for="phone-field">Телефон</label>
+                <input class="form__field" id="phone-field" type="tel" name="phone" value="" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+                <svg class="form__icon" width="24.829" height="24.333"><use xlink:href="img/sprite.svg#icon-phone"></use></svg>
+              </div>
             </div>
-          </div>
-          <div class="container form__container">
-            <span class="form__subtitle form__subtitle--contacts subtitle">E-mail</span>
-            <div class="form__item form__item--contacts">
-              <label class="visually-hidden" for="phone-field">Электронная почта</label>
-              <input class="form__field" id="email-field" type="email" name="email" value="" placeholder="Ваш Email*" required>
-              <svg class="form__icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"><path opacity="0.3" fill="#333" d="M28 5H4a4 4 0 0 0-4 4v13a4 4 0 0 0 4 4h24a4 4 0 0 0 4-4V9a4 4 0 0 0-4-4zM2 10.25l6.999 5.25L2 20.75v-10.5zM30 22c0 1.104-.898 2-2 2H4c-1.103 0-2-.896-2-2l7.832-5.875 4.368 3.277a3 3 0 0 0 3.599 0l4.369-3.277L30 22zm0-1.25l-7-5.25 7-5.25v10.5zm-12.801-2.148c-.35.263-.763.4-1.199.4s-.851-.139-1.2-.4L10.665 15.5l-.833-.625L2 9.001V9c0-1.103.897-2 2-2h24c1.102 0 2 .897 2 2l-12.801 9.602z"/></svg>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset class="form__fieldset form__fieldset--textarea">
-          <div class="container form__container">
-            <span class="form__subtitle subtitle">Доп</span>
-            <div class="form__item form__item--textarea">
-              <label class="visually-hidden" for="other-field">Дополнительная информация</label>
-              <textarea class="form__textarea" id="other-field" name="other" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <div class="form__wrapper">
+              <span class="form__subtitle subtitle">E-mail</span>
+              <div class="form__item form__item--contacts">
+                <label class="visually-hidden" for="phone-field">Электронная почта</label>
+                <input class="form__field" id="email-field" type="email" name="email" value="" placeholder="Ваш Email*" required>
+                <svg class="form__icon" width="32" height="32"><use xlink:href="img/sprite.svg#icon-email"></use></svg>
+              </div>
             </div>
           </div>
         </fieldset>
-        <div class="container form__container form__container--submit">
+        <fieldset class="form__fieldset">
+          <div class="container form__container">
+            <div class="form__wrapper">
+              <span class="form__subtitle subtitle">Доп</span>
+              <div class="form__item form__item--textarea">
+                <label class="visually-hidden" for="other-field">Дополнительная информация</label>
+                <textarea class="form__textarea" id="other-field" name="other" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="container form__container--submit">
           <span class="form__footnote">*Поля обязательны для заполнения</span>
           <button class="form__btn btn" type="submit">Отправить заказ</button>
         </div>
