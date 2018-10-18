@@ -901,6 +901,9 @@ a[href]:active .icon {
     background-image: url("../img/map-mobile@2x.jpg");
   }
 }
+.contacts__balloon--title {
+  margin: 0;
+}
 .contacts__btn {
   max-width: 260px;
   margin: 0 auto;

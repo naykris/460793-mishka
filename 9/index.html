@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/style.css">
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <base href="https://htmlacademy-adaptive.github.io/460793-mishka/9/">
 </head>
   <body>
@@ -16,7 +17,7 @@
             <picture>
               <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img src="img/logo-mobile.svg" alt="Изображение товара Зайчик-попрыгайчик">
+              <img src="img/logo-mobile.svg" alt="Логотип магазина Mishka">
             </picture>
           </a>
           <button class="main-nav__toggle" type="button">
@@ -158,7 +159,9 @@
               </tr>
             </table>
           </div>
-        <div class="contacts__map"></div>
+        <div class="contacts__map" id="map">
+
+        </div>
         <a href="#" class="contacts__btn btn">Напишите нам</a>
       </section>
     </main>
@@ -220,6 +223,7 @@
         <a href="#" class="modal__btn btn">Добавить</a>
       </div>
     </div>
-    <script src="js/script.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
   </body>
 </html>
