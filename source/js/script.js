@@ -7,31 +7,35 @@ var modalButton = document.querySelector('.modal__btn');
 /* Меню */
 navMain.classList.remove('main-nav--nojs');
 
-navToggle.addEventListener('click', function() {
-  if (navMain.classList.contains('main-nav--closed')) {
-    navMain.classList.remove('main-nav--closed');
-    navMain.classList.add('main-nav--opened');
-  } else {
-    navMain.classList.add('main-nav--closed');
-    navMain.classList.remove('main-nav--opened');
-  }
+navToggle.addEventListener('click', function () {
+   'use strict';
+   if (navMain.classList.contains('main-nav--closed')) {
+      navMain.classList.remove('main-nav--closed');
+      navMain.classList.add('main-nav--opened');
+   } else {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+   }
 });
 
 /* Модальное окно */
-orderButton.addEventListener('click', function() {
-  modalOverlay.classList.add('modal--show');
+orderButton.addEventListener('click', function () {
+   'use strict';
+   modalOverlay.classList.add('modal--show');
 });
 
-modalButton.addEventListener('click', function() {
-  if (modalOverlay.classList.contains('modal--show')) {
-    modalOverlay.classList.remove('modal--show');
-  }
+modalButton.addEventListener('click', function () {
+   'use strict';
+   if (modalOverlay.classList.contains('modal--show')) {
+      modalOverlay.classList.remove('modal--show');
+   }
 });
 
 window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (modalOverlay.classList.contains("modal--show")) {
-      modalOverlay.classList.remove("modal--show");
-    }
-  }
+   'use strict';
+   if (evt.keyCode === 27) {
+      if (modalOverlay.classList.contains("modal--show")) {
+         modalOverlay.classList.remove("modal--show");
+      }
+   }
 });
